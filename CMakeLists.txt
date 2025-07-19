@@ -5,5 +5,5 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Add subprojects
-add_subdirectory(Engine)
+add_subdirectory(Aerin)
 add_subdirectory(Sandbox)

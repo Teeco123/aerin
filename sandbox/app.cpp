@@ -1,6 +1,13 @@
-#include "test.h"
+#include "aerin.h"
+
+class Sandbox : public Aerin::App {
+public:
+  Sandbox() {}
+  ~Sandbox() {}
+};
 
 int main() {
-  Test::PrintHello();
-  return 0;
+  Sandbox *sandbox = new Sandbox();
+  sandbox->Run();
+  delete sandbox;
 }
