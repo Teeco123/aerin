@@ -1,0 +1,8 @@
+/Users/kacper/Developer/aerin/.build/CMakeFiles/edit_cache.dir
+/Users/kacper/Developer/aerin/.build/CMakeFiles/rebuild_cache.dir
+/Users/kacper/Developer/aerin/.build/Aerin/CMakeFiles/Aerin.dir
+/Users/kacper/Developer/aerin/.build/Aerin/CMakeFiles/edit_cache.dir
+/Users/kacper/Developer/aerin/.build/Aerin/CMakeFiles/rebuild_cache.dir
+/Users/kacper/Developer/aerin/.build/Sandbox/CMakeFiles/Sandbox.dir
+/Users/kacper/Developer/aerin/.build/Sandbox/CMakeFiles/edit_cache.dir
+/Users/kacper/Developer/aerin/.build/Sandbox/CMakeFiles/rebuild_cache.dir
