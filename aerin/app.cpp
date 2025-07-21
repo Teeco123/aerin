@@ -4,8 +4,5 @@ namespace Aerin {
 App::App() {}
 App::~App() {}
 
-void App::Run() {
-  while (true)
-    ;
-}
+void App::Run() {}
 } // namespace Aerin

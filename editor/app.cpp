@@ -1,13 +1,15 @@
 #include "aerin.h"
+#include <printf.h>
 
-class Sandbox : public Aerin::App {
+class Editor : public Aerin::App {
 public:
-  Sandbox() {}
-  ~Sandbox() {}
+  Editor() {}
+  ~Editor() {}
 };
 
 int main() {
-  Sandbox *sandbox = new Sandbox();
-  sandbox->Run();
-  delete sandbox;
+  printf("Start editor");
+  Editor *editor = new Editor();
+  editor->Run();
+  delete editor;
 }
