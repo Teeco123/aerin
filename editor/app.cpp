@@ -8,8 +8,6 @@ public:
 };
 
 int main() {
-  printf("Start editor");
   Editor *editor = new Editor();
   editor->Run();
-  delete editor;
 }

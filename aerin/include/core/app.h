@@ -7,5 +7,9 @@ public:
   virtual ~App();
 
   void Run();
+
+private:
+  bool m_running = false;
+  float m_deltaTime;
 };
 } // namespace Aerin
