@@ -24,8 +24,13 @@
             nixfmt-rfc-style
             nil
             llvmPackages_20.clang
+            llvmPackages_20.clang-tools
             cmake
           ];
+          shellHook = ''
+            export PATH=${pkgs.llvmPackages_20.clang}/bin:$PATH
+            export PATH=${pkgs.llvmPackages_20.clang-tools}/bin:$PATH
+          '';
         };
         packages.default = pkgs.clangStdenv.mkDerivation {
           pname = "Editor";
@@ -45,11 +50,13 @@
           '';
 
           installPhase = ''
-            mkdir -p $out/lib
-            cp .build/Aerin/libAerin.dylib $out/lib/
+              mkdir -p $out/lib
+              cp .build/Aerin/libAerin.dylib $out/lib/
 
-            mkdir -p $out/bin
-            cp .build/Editor/Editor $out/bin/
+              mkdir -p $out/bin
+              cp .build/Editor/Editor $out/bin/
+
+            	cp .build/compile_commands.json $out/
           '';
         };
       }
