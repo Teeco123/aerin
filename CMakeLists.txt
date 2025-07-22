@@ -6,5 +6,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Add subprojects
+add_subdirectory(deps/glfw)
 add_subdirectory(Aerin)
 add_subdirectory(Editor)
