@@ -1,0 +1,56 @@
+Checks: >
+  bugprone-*, 
+  performance-*, 
+  readability-identifier-naming, 
+  cppcoreguidelines-*,
+  clang-analyzer-*, 
+  -cppcoreguidelines-special-member-functions*,
+
+WarningsAsErrors: '*'
+
+CheckOptions:
+  # === Class & Structs ===
+  - key: readability-identifier-naming.ClassCase
+    value: PascalCase
+  - key: readability-identifier-naming.StructCase
+    value: PascalCase
+
+  # === Functions ===
+  - key: readability-identifier-naming.FunctionCase
+    value: PascalCase
+
+  # === Member Variables ===
+  - key: readability-identifier-naming.MemberVariableCase
+    value: camelBack
+  - key: readability-identifier-naming.MemberVariablePrefix
+    value: m_
+
+  # === Static Member Variables ===
+  - key: readability-identifier-naming.ClassMemberCase
+    value: camelBack
+  - key: readability-identifier-naming.ClassMemberPrefix
+    value: s_
+
+  # === Local Variables ===
+  - key: readability-identifier-naming.VariableCase
+    value: camelBack
+
+  # === Constants ===
+  - key: readability-identifier-naming.ConstantCase
+    value: UPPER_CASE
+
+  # === Macros ===
+  - key: readability-identifier-naming.MacroDefinitionCase
+    value: UPPER_CASE
+
+  # === Enums ===
+  - key: readability-identifier-naming.EnumCase
+    value: PascalCase
+
+  # === Enum Values ===
+  - key: readability-identifier-naming.EnumConstantCase
+    value: PascalCase
+
+  # === Namespaces ===
+  - key: readability-identifier-naming.NamespaceCase
+    value: PascalCase

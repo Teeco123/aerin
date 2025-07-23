@@ -10,6 +10,6 @@ public:
 
 private:
   bool m_running = false;
-  float m_deltaTime;
+  float m_deltaTime = 0.0f;
 };
 } // namespace Aerin
