@@ -2,7 +2,7 @@
 #include <chrono>
 #include <print>
 
-#define UPDATE_MS 8.33
+#define FIXED_UPDATE_MS 16.6
 
 namespace Aerin {
 App::App() {}
@@ -14,13 +14,16 @@ void App::Run() {
   using TimePoint = std::chrono::time_point<Clock>;
   using Duration = std::chrono::duration<double, std::milli>;
 
-  m_running = true;
   TimePoint lastUpdate = Clock::now();
+  TimePoint lastFixedUpdate = Clock::now();
+
+  // Setting up accumulator ("discharge") for fixed update
   Clock::duration accumulator = Clock::duration::zero();
-  std::chrono::duration<double, std::milli> slice(UPDATE_MS);
+  std::chrono::duration<double, std::milli> slice(FIXED_UPDATE_MS);
   auto sliceDuration = std::chrono::duration_cast<Clock::duration>(slice);
 
   while (m_running) {
+    // Calculating delta time
     TimePoint now = Clock::now();
     m_deltaTime =
         (float)std::chrono::duration_cast<Duration>(now - lastUpdate).count();
@@ -30,11 +33,17 @@ void App::Run() {
         std::chrono::duration_cast<Clock::duration>(Duration(m_deltaTime));
 
     while (accumulator > slice) {
+      // Calculating fixed delta time
+      TimePoint now = Clock::now();
+      m_fixedDeltaTime =
+          (float)std::chrono::duration_cast<Duration>(now - lastFixedUpdate)
+              .count();
+      lastFixedUpdate += std::chrono::duration_cast<Clock::duration>(
+          Duration(m_fixedDeltaTime));
+
+      // Do as many calculations to catch up
       accumulator -= sliceDuration;
-      std::println("Update");
     }
-    std::println("Render");
   }
 }
-
 } // namespace Aerin
