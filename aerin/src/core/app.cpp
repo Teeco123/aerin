@@ -1,7 +1,10 @@
 #include "core/app.h"
 #include <chrono>
+#include <memory>
 #include <print>
 
+#define WINDOW_WIDTH 600
+#define WINDOW_HEIGHT 600
 #define FIXED_UPDATE_MS 16.6
 
 namespace Aerin {
@@ -9,6 +12,7 @@ App::App() {}
 App::~App() {}
 
 void App::Run() {
+  m_window = Window::Create(WindowConfig(WINDOW_WIDTH, WINDOW_HEIGHT, "gowno"));
 
   using Clock = std::chrono::high_resolution_clock;
   using TimePoint = std::chrono::time_point<Clock>;
@@ -17,7 +21,7 @@ void App::Run() {
   TimePoint lastUpdate = Clock::now();
   TimePoint lastFixedUpdate = Clock::now();
 
-  // Setting up accumulator ("discharge") for fixed update
+  // Setting up accumulator to ("discharge") for fixed update
   Clock::duration accumulator = Clock::duration::zero();
   std::chrono::duration<double, std::milli> slice(FIXED_UPDATE_MS);
   auto sliceDuration = std::chrono::duration_cast<Clock::duration>(slice);
