@@ -1,12 +1,13 @@
 #include "core/window.h"
+#include "platform/macos/macos_window.h"
 #include <memory>
-#include <print>
-#include <string>
 
 namespace Aerin {
 std::unique_ptr<Window> Window::Create(const WindowConfig &windowConfig) {
 #ifdef PLATFORM_WINDOW
+  static_assert(false, "Unsupported platform");
 #elifdef PLATFORM_LINUX
+  static_assert(false, "Unsupported platform");
 #elifdef PLATFORM_MACOS
   return std::make_unique<MacOSWindow>(windowConfig);
 #else
@@ -14,16 +15,5 @@ std::unique_ptr<Window> Window::Create(const WindowConfig &windowConfig) {
 #endif
 }
 Window::~Window() {}
-
-MacOSWindow::MacOSWindow(const WindowConfig &windowConfig) {
-  m_windowConfig = windowConfig;
-  std::println("MacOS window config: height - {}, width - {}, title - {}",
-               windowConfig.height, windowConfig.width, windowConfig.title);
-}
-MacOSWindow::~MacOSWindow() {}
-
-unsigned int MacOSWindow::GetWidth() const { return m_windowConfig.width; }
-unsigned int MacOSWindow::GetHeight() const { return m_windowConfig.height; }
-std::string MacOSWindow::GetTitle() const { return m_windowConfig.title; }
 
 } // namespace Aerin
