@@ -27,6 +27,10 @@ void App::Run() {
 
   while (m_running) {
     // Calculating delta time
+    if (m_window->ShouldClose()) {
+      m_running = false;
+    }
+
     TimePoint now = Clock::now();
     m_deltaTime =
         (float)std::chrono::duration_cast<Duration>(now - lastUpdate).count();
@@ -47,6 +51,8 @@ void App::Run() {
       // Do as many calculations to catch up
       accumulator -= sliceDuration;
     }
+    m_window->PollEvents();
+    m_window->SwapBuffers();
   }
 }
 } // namespace Aerin
