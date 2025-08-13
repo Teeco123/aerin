@@ -32,7 +32,7 @@ void MacOSWindow::Shutdown() {
 }
 
 void MacOSWindow::SwapBuffers() { glfwSwapBuffers(m_glfwWindow); }
-void MacOSWindow::PollEvents() { glfwPollEvents(); }
+void MacOSWindow::PollEvents() { glfwWaitEvents(); }
 bool MacOSWindow::ShouldClose() {
   if (glfwWindowShouldClose(m_glfwWindow)) {
     return true;
