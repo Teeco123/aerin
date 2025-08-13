@@ -1,19 +1,19 @@
-#include "core/window.h"
-#include "platform/macos/macos_window.h"
+#include "renderer/renderer_api.h"
+#include "platform/metal/metal_renderer_api.h"
 #include <memory>
 
 namespace Aerin {
-std::unique_ptr<Window> Window::Create(const WindowConfig &windowConfig) {
+
+std::unique_ptr<RendererAPI> Create() {
 #ifdef PLATFORM_WINDOWS
   static_assert(false, "Unsupported platform");
 #elifdef PLATFORM_LINUX
   static_assert(false, "Unsupported platform");
 #elifdef PLATFORM_MACOS
-  return std::make_unique<MacOSWindow>(windowConfig);
+  RendererAPI::s_rendererAPI = RendererAPI::API::METAL;
+  return std::make_unique<MetalRendererAPI>();
 #else
   static_assert(false, "Unsupported platform");
 #endif
 }
-Window::~Window() {}
-
-} // namespace Aerin
+}; // namespace Aerin
