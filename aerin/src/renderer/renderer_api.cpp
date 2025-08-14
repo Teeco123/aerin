@@ -3,6 +3,7 @@
 #include <memory>
 
 namespace Aerin {
+RendererAPI::API RendererAPI::s_rendererAPI = RendererAPI::API::NONE;
 
 std::unique_ptr<RendererAPI> Create() {
 #ifdef PLATFORM_WINDOWS
@@ -16,4 +17,6 @@ std::unique_ptr<RendererAPI> Create() {
   static_assert(false, "Unsupported platform");
 #endif
 }
+
+RendererAPI::~RendererAPI() {};
 }; // namespace Aerin
