@@ -1,151 +1,169 @@
 [
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/context.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/context.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/context.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/context.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/context.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/context.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/init.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/init.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/init.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/init.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/init.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/init.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/input.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/input.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/input.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/input.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/input.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/input.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/monitor.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/monitor.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/monitor.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/monitor.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/monitor.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/platform.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/platform.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/platform.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/platform.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/platform.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/platform.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/vulkan.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/vulkan.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/vulkan.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/vulkan.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/vulkan.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/window.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/window.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/window.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/window.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/window.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/window.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/egl_context.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/egl_context.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/egl_context.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/egl_context.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/egl_context.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/osmesa_context.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/osmesa_context.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/osmesa_context.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/null_init.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/null_init.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/null_init.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/null_init.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/null_init.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/null_init.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/null_monitor.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/null_monitor.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/null_monitor.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/null_monitor.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/null_monitor.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/null_window.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/null_window.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/null_window.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/null_window.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/null_window.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/null_window.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/null_joystick.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/null_joystick.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/null_joystick.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/null_joystick.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/null_joystick.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_time.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/cocoa_time.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_time.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/cocoa_time.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/cocoa_time.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_module.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/posix_module.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_module.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/posix_module.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/posix_module.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/posix_thread.c",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/cc -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o -c /Users/kacper/Developer/aerin/deps/glfw/src/posix_thread.c",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/posix_thread.c",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/clang -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -x objective-c -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_init.m.o -c /Users/kacper/Developer/aerin/deps/glfw/src/cocoa_init.m",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -x objective-c -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_init.m.o -c /Users/kacper/Developer/aerin/deps/glfw/src/cocoa_init.m",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/cocoa_init.m",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/clang -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -x objective-c -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_joystick.m.o -c /Users/kacper/Developer/aerin/deps/glfw/src/cocoa_joystick.m",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -x objective-c -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_joystick.m.o -c /Users/kacper/Developer/aerin/deps/glfw/src/cocoa_joystick.m",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/cocoa_joystick.m",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/clang -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -x objective-c -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_monitor.m.o -c /Users/kacper/Developer/aerin/deps/glfw/src/cocoa_monitor.m",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -x objective-c -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_monitor.m.o -c /Users/kacper/Developer/aerin/deps/glfw/src/cocoa_monitor.m",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/cocoa_monitor.m",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/clang -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -x objective-c -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_window.m.o -c /Users/kacper/Developer/aerin/deps/glfw/src/cocoa_window.m",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -x objective-c -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_window.m.o -c /Users/kacper/Developer/aerin/deps/glfw/src/cocoa_window.m",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/cocoa_window.m",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/deps/glfw/src",
-  "command": "/usr/bin/clang -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/.build/deps/glfw/src -x objective-c -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/nsgl_context.m.o -c /Users/kacper/Developer/aerin/deps/glfw/src/nsgl_context.m",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/glfw/src",
+  "command": "/usr/bin/clang -D_GLFW_COCOA -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/glfw/src -I/Users/kacper/Developer/aerin/build/deps/glfw/src -x objective-c -std=c99 -arch arm64 -fPIC -Wall -o CMakeFiles/glfw.dir/nsgl_context.m.o -c /Users/kacper/Developer/aerin/deps/glfw/src/nsgl_context.m",
   "file": "/Users/kacper/Developer/aerin/deps/glfw/src/nsgl_context.m",
   "output": "deps/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/Aerin",
-  "command": "/usr/bin/c++ -DAerin_EXPORTS -DPLATFORM_MACOS -I/Users/kacper/Developer/aerin/Aerin/include -I/Users/kacper/Developer/aerin/deps/glfw/include -std=gnu++2b -arch arm64 -fPIC -o CMakeFiles/Aerin.dir/src/core/app.cpp.o -c /Users/kacper/Developer/aerin/Aerin/src/core/app.cpp",
+  "directory": "/Users/kacper/Developer/aerin/build/deps/metal-cpp",
+  "command": "/usr/bin/c++  -I/Users/kacper/Developer/aerin/deps/metal-cpp -std=gnu++2b -arch arm64 -o CMakeFiles/MetalCPP.dir/def.cpp.o -c /Users/kacper/Developer/aerin/deps/metal-cpp/def.cpp",
+  "file": "/Users/kacper/Developer/aerin/deps/metal-cpp/def.cpp",
+  "output": "deps/metal-cpp/CMakeFiles/MetalCPP.dir/def.cpp.o"
+},
+{
+  "directory": "/Users/kacper/Developer/aerin/build/Aerin",
+  "command": "/usr/bin/c++ -DAerin_EXPORTS -DPLATFORM_MACOS -I/Users/kacper/Developer/aerin/Aerin/include -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/metal-cpp -std=gnu++2b -arch arm64 -fPIC -o CMakeFiles/Aerin.dir/src/core/app.cpp.o -c /Users/kacper/Developer/aerin/Aerin/src/core/app.cpp",
   "file": "/Users/kacper/Developer/aerin/Aerin/src/core/app.cpp",
   "output": "Aerin/CMakeFiles/Aerin.dir/src/core/app.cpp.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/Aerin",
-  "command": "/usr/bin/c++ -DAerin_EXPORTS -DPLATFORM_MACOS -I/Users/kacper/Developer/aerin/Aerin/include -I/Users/kacper/Developer/aerin/deps/glfw/include -std=gnu++2b -arch arm64 -fPIC -o CMakeFiles/Aerin.dir/src/core/window.cpp.o -c /Users/kacper/Developer/aerin/Aerin/src/core/window.cpp",
+  "directory": "/Users/kacper/Developer/aerin/build/Aerin",
+  "command": "/usr/bin/c++ -DAerin_EXPORTS -DPLATFORM_MACOS -I/Users/kacper/Developer/aerin/Aerin/include -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/metal-cpp -std=gnu++2b -arch arm64 -fPIC -o CMakeFiles/Aerin.dir/src/core/window.cpp.o -c /Users/kacper/Developer/aerin/Aerin/src/core/window.cpp",
   "file": "/Users/kacper/Developer/aerin/Aerin/src/core/window.cpp",
   "output": "Aerin/CMakeFiles/Aerin.dir/src/core/window.cpp.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/Aerin",
-  "command": "/usr/bin/c++ -DAerin_EXPORTS -DPLATFORM_MACOS -I/Users/kacper/Developer/aerin/Aerin/include -I/Users/kacper/Developer/aerin/deps/glfw/include -std=gnu++2b -arch arm64 -fPIC -o CMakeFiles/Aerin.dir/src/platform/macos/macos_window.cpp.o -c /Users/kacper/Developer/aerin/Aerin/src/platform/macos/macos_window.cpp",
+  "directory": "/Users/kacper/Developer/aerin/build/Aerin",
+  "command": "/usr/bin/c++ -DAerin_EXPORTS -DPLATFORM_MACOS -I/Users/kacper/Developer/aerin/Aerin/include -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/metal-cpp -std=gnu++2b -arch arm64 -fPIC -o CMakeFiles/Aerin.dir/src/platform/macos/macos_window.cpp.o -c /Users/kacper/Developer/aerin/Aerin/src/platform/macos/macos_window.cpp",
   "file": "/Users/kacper/Developer/aerin/Aerin/src/platform/macos/macos_window.cpp",
   "output": "Aerin/CMakeFiles/Aerin.dir/src/platform/macos/macos_window.cpp.o"
 },
 {
-  "directory": "/Users/kacper/Developer/aerin/.build/Editor",
-  "command": "/usr/bin/c++  -I/Users/kacper/Developer/aerin/aerin -I/Users/kacper/Developer/aerin/Aerin/include -I/Users/kacper/Developer/aerin/deps/glfw/include -std=gnu++2b -arch arm64 -o CMakeFiles/Editor.dir/app.cpp.o -c /Users/kacper/Developer/aerin/Editor/app.cpp",
+  "directory": "/Users/kacper/Developer/aerin/build/Aerin",
+  "command": "/usr/bin/c++ -DAerin_EXPORTS -DPLATFORM_MACOS -I/Users/kacper/Developer/aerin/Aerin/include -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/metal-cpp -std=gnu++2b -arch arm64 -fPIC -o CMakeFiles/Aerin.dir/src/platform/metal/metal_renderer_api.cpp.o -c /Users/kacper/Developer/aerin/Aerin/src/platform/metal/metal_renderer_api.cpp",
+  "file": "/Users/kacper/Developer/aerin/Aerin/src/platform/metal/metal_renderer_api.cpp",
+  "output": "Aerin/CMakeFiles/Aerin.dir/src/platform/metal/metal_renderer_api.cpp.o"
+},
+{
+  "directory": "/Users/kacper/Developer/aerin/build/Aerin",
+  "command": "/usr/bin/c++ -DAerin_EXPORTS -DPLATFORM_MACOS -I/Users/kacper/Developer/aerin/Aerin/include -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/metal-cpp -std=gnu++2b -arch arm64 -fPIC -o CMakeFiles/Aerin.dir/src/renderer/renderer_api.cpp.o -c /Users/kacper/Developer/aerin/Aerin/src/renderer/renderer_api.cpp",
+  "file": "/Users/kacper/Developer/aerin/Aerin/src/renderer/renderer_api.cpp",
+  "output": "Aerin/CMakeFiles/Aerin.dir/src/renderer/renderer_api.cpp.o"
+},
+{
+  "directory": "/Users/kacper/Developer/aerin/build/Editor",
+  "command": "/usr/bin/c++  -I/Users/kacper/Developer/aerin/aerin -I/Users/kacper/Developer/aerin/Aerin/include -I/Users/kacper/Developer/aerin/deps/glfw/include -I/Users/kacper/Developer/aerin/deps/metal-cpp -std=gnu++2b -arch arm64 -o CMakeFiles/Editor.dir/app.cpp.o -c /Users/kacper/Developer/aerin/Editor/app.cpp",
   "file": "/Users/kacper/Developer/aerin/Editor/app.cpp",
   "output": "Editor/CMakeFiles/Editor.dir/app.cpp.o"
 }

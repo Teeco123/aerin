@@ -15,4 +15,4 @@ add_library(Aerin SHARED
 
 target_include_directories(Aerin PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-target_link_libraries(Aerin PUBLIC glfw)
+target_link_libraries(Aerin PUBLIC glfw MetalCPP)
