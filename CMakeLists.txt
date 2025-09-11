@@ -12,7 +12,10 @@ set(GLFW_BUILD_DOCS OFF CACHE BOOL "Build docs" FORCE)
 set(GLFW_INSTALL OFF CACHE BOOL "Install GLFW" FORCE)
 
 # Add subprojects
+if(APPLE)
+    add_subdirectory(deps/metal-cpp)
+endif()
+
 add_subdirectory(deps/glfw)
-add_subdirectory(deps/metal-cpp)
-add_subdirectory(Aerin)
-add_subdirectory(Editor)
+add_subdirectory(aerin)
+add_subdirectory(editor)
