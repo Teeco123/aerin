@@ -65,7 +65,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y build-essential cmake libx11-dev libxrandr-dev \
         libxi-dev libxcursor-dev libgl1-mesa-dev libwayland-dev wayland-protocols \
-        libxkbcommon-dev
+        libxkbcommon-dev libxinerama-dev
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
