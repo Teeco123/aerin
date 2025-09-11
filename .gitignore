@@ -1,7 +1,6 @@
 .build/
 build/
 .cache/
-deps/
 
 *result
 *.DS_Store
