@@ -1,5 +1,4 @@
 #include "renderer/renderer_api.h"
-#include "platform/metal/metal_renderer_api.h"
 #include <memory>
 
 namespace Aerin {
@@ -9,10 +8,9 @@ std::unique_ptr<RendererAPI> Create() {
 #ifdef PLATFORM_WINDOWS
   static_assert(false, "Unsupported platform");
 #elifdef PLATFORM_LINUX
-  static_assert(false, "Unsupported platform");
+	return true;
 #elifdef PLATFORM_MACOS
-  RendererAPI::s_rendererAPI = RendererAPI::API::METAL;
-  return std::make_unique<MetalRendererAPI>();
+  static_assert(false, "Unsupported platform");
 #else
   static_assert(false, "Unsupported platform");
 #endif
