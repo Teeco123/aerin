@@ -5,7 +5,13 @@
 namespace Aerin {
 class RendererAPI {
 public:
-  enum class API : uint8_t { NONE = 0, METAL = 1, DIRECTX = 2, VULKAN = 3 };
+  enum class API : uint8_t {
+    NONE = 0,
+    OPENGL = 1,
+    METAL = 2,
+    DIRECTX = 3,
+    VULKAN = 4
+  };
 
 public:
   virtual ~RendererAPI();

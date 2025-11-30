@@ -1,4 +1,5 @@
 #include "renderer/renderer_api.h"
+#include "platform/opengl/opengl_renderer_api.h"
 #include <memory>
 
 namespace Aerin {
@@ -8,7 +9,8 @@ std::unique_ptr<RendererAPI> Create() {
 #ifdef PLATFORM_WINDOWS
   static_assert(false, "Unsupported platform");
 #elifdef PLATFORM_LINUX
-	return true;
+  RendererAPI::s_rendererAPI = RendererAPI::API::OPENGL;
+  return std::make_unique<OpenGLRendererAPI>();
 #elifdef PLATFORM_MACOS
   static_assert(false, "Unsupported platform");
 #else
