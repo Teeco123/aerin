@@ -1,5 +1,10 @@
 #include "core/window.hpp"
 #include "platform/wayland/wayland_window.hpp"
+#include <cstdio>
+#include <cstdlib>
+#include <memory>
+#include <stdexcept>
+#include <string>
 
 namespace Aerin {
 std::unique_ptr<Window> Window::Create(const WindowConfig &windowConfig) {
