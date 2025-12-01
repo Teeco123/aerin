@@ -1,7 +1,6 @@
 #pragma once
 
 #include "core/window.hpp"
-#include <memory>
 
 namespace Aerin {
 class App {

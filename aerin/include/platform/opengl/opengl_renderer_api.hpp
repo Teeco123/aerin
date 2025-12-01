@@ -1,7 +1,6 @@
 #pragma once
 
 #include "renderer/renderer_api.hpp"
-#include <memory>
 
 namespace Aerin {
 class OpenGLRendererAPI : public RendererAPI {

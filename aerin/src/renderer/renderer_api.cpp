@@ -1,6 +1,5 @@
 #include "renderer/renderer_api.hpp"
 #include "platform/opengl/opengl_renderer_api.hpp"
-#include <memory>
 
 namespace Aerin {
 RendererAPI::API RendererAPI::s_rendererAPI = RendererAPI::API::NONE;

@@ -1,6 +1,5 @@
 #include "platform/wayland/wayland_window.hpp"
 #include "GLFW/glfw3.h"
-#include <print>
 
 namespace Aerin {
 WaylandWindow::WaylandWindow(const WindowConfig &windowConfig) {
