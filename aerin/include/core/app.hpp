@@ -1,6 +1,6 @@
 #pragma once
 
-#include "core/window.h"
+#include "core/window.hpp"
 #include <memory>
 
 namespace Aerin {

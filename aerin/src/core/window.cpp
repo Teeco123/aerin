@@ -1,6 +1,7 @@
-#include "core/window.h"
-#include "platform/wayland/wayland_window.h"
+#include "core/window.hpp"
+#include "platform/wayland/wayland_window.hpp"
 #include <cstdio>
+#include <cstdlib>
 #include <memory>
 #include <stdexcept>
 #include <string>

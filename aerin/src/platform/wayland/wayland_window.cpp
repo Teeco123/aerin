@@ -1,6 +1,4 @@
-#define GLFW_INCLUDE_NONE
-#define GLFW_EXPOSE_NATIVE_COCOA
-#include "platform/wayland/wayland_window.h"
+#include "platform/wayland/wayland_window.hpp"
 #include "GLFW/glfw3.h"
 #include <print>
 

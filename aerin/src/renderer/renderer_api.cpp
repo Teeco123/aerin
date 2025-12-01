@@ -1,5 +1,5 @@
-#include "renderer/renderer_api.h"
-#include "platform/opengl/opengl_renderer_api.h"
+#include "renderer/renderer_api.hpp"
+#include "platform/opengl/opengl_renderer_api.hpp"
 #include <memory>
 
 namespace Aerin {
