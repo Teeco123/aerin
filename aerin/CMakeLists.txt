@@ -12,6 +12,10 @@ add_library(Aerin SHARED
 	${AERIN_SOURCES}
 )
 
+# Until i fix this so it works with clangd
+#
+# target_precompile_headers(Aerin PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/pch.hpp)
+
 target_include_directories(Aerin PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 target_link_libraries(Aerin PUBLIC glfw)
