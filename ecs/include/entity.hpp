@@ -4,7 +4,7 @@
 
 namespace Aerin {
 
-using EntityID = uint64_t;
+using EntityID = uint32_t;
 
 class EntityManager;
 
