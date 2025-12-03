@@ -6,13 +6,13 @@ namespace Aerin {
 
 using EntityID = uint64_t;
 
-class ECSRegistry;
+class EntityManager;
 
 class Entity {
 public:
   EntityID id;
-  ECSRegistry *registry;
+  EntityManager *manager;
 
-  Entity(EntityID id, ECSRegistry *reg) : id(id), registry(reg) {};
+  Entity(EntityID id, EntityManager *manager) : id(id), manager(manager) {};
 };
 } // namespace Aerin

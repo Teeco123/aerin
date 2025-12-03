@@ -1,14 +1,15 @@
 #pragma once
 
-#include "core/ecs/entity.hpp"
+#include "entity.hpp"
+#include <print>
 #include <queue>
 
 namespace Aerin {
 
-class ECSRegistry {
+class EntityManager {
 public:
-  ECSRegistry() = default;
-  ~ECSRegistry() = default;
+  EntityManager() = default;
+  ~EntityManager() = default;
 
   Entity CreateEntity() {
     // Re-use recycled entity id
@@ -21,6 +22,7 @@ public:
     // If no recycled entity id create new one
     EntityID id = aliveEntities;
     aliveEntities++;
+    std::println("{}", aliveEntities);
     return Entity(id, this);
   };
 
