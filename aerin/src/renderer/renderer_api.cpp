@@ -1,4 +1,5 @@
 #include "renderer/renderer_api.hpp"
+#include "platform/metal/metal_renderer_api.hpp"
 #include "platform/opengl/opengl_renderer_api.hpp"
 #include <memory>
 
@@ -12,7 +13,8 @@ std::unique_ptr<RendererAPI> Create() {
   RendererAPI::s_rendererAPI = RendererAPI::API::OPENGL;
   return std::make_unique<OpenGLRendererAPI>();
 #elifdef PLATFORM_MACOS
-  static_assert(false, "Unsupported platform");
+  RendererAPI::s_rendererAPI = RendererAPI::API::METAL;
+  return std::make_unique<MetalRendererAPI>();
 #else
   static_assert(false, "Unsupported platform");
 #endif

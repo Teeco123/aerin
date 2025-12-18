@@ -1,4 +1,5 @@
 #include "core/window.hpp"
+#include "platform/macos/macos_window.hpp"
 #include "platform/wayland/wayland_window.hpp"
 #include <cstdio>
 #include <cstdlib>
@@ -11,7 +12,7 @@ std::unique_ptr<Window> Window::Create(const WindowConfig &windowConfig) {
 #ifdef PLATFORM_WINDOWS
   static_assert(false, "Unsupported platform");
 #elifdef PLATFORM_MACOS
-  static_assert(false, "Unsupported platform");
+  return std::make_unique<MacosWindow>(windowConfig);
 #elifdef PLATFORM_LINUX
   const char *sessionType = std::getenv("XDG_SESSION_TYPE");
   if (sessionType != nullptr) {
