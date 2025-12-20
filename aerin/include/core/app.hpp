@@ -2,11 +2,17 @@
 
 #include "core/window.hpp"
 #include <memory>
+#include <string>
 
 namespace Aerin {
+
+struct AppSpecs {
+  std::string name = "Aerin app";
+};
+
 class App {
 public:
-  App();
+  App(const AppSpecs &specs);
   virtual ~App();
   void Run();
 

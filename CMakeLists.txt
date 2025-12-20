@@ -19,7 +19,6 @@ set(GLFW_INSTALL OFF CACHE BOOL "Install GLFW" FORCE)
 
 add_subdirectory(aerin)
 add_subdirectory(editor)
-add_subdirectory(ecs)
 
 install(TARGETS Aerin
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}

@@ -7,12 +7,13 @@
 #define FIXED_UPDATE_MS 16.6
 
 namespace Aerin {
-App::App() {}
+App::App(const AppSpecs &specs) {
+  m_window =
+      Window::Create(WindowConfig(WINDOW_WIDTH, WINDOW_HEIGHT, specs.name));
+}
 App::~App() {}
 
 void App::Run() {
-  m_window = Window::Create(WindowConfig(WINDOW_WIDTH, WINDOW_HEIGHT, "gowno"));
-
   using Clock = std::chrono::high_resolution_clock;
   using TimePoint = std::chrono::time_point<Clock>;
   using Duration = std::chrono::duration<double, std::milli>;
