@@ -1,14 +1,16 @@
 #include "platform/macos/window.hpp"
 #include "GLFW/glfw3.h"
+
 #include <cassert>
 #include <iostream>
 #include <print>
 
 namespace Aerin {
-
 MacOSWindow::MacOSWindow(const WindowSpecs &windowSpecs) {
   m_windowSpecs = windowSpecs;
   std::println("Window platform: MacOS");
+
+  glfwInitHint(GLFW_PLATFORM, GLFW_PLATFORM_COCOA);
 
   if (!glfwInit()) {
     std::cerr << "Failed to init GLFW!\n";

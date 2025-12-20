@@ -1,7 +1,6 @@
 #include "core/app.hpp"
 #include <cassert>
 #include <memory>
-#include <print>
 
 namespace Aerin {
 
@@ -17,11 +16,10 @@ void App::Start() {
   m_running = true;
   while (m_running) {
     if (m_window->ShouldClose()) {
-      std::print("stop");
       m_running = false;
     }
 
-    m_window->PoolEvents();
+    m_window->PollEvents();
     m_window->SwapBuffers();
   }
 }

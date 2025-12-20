@@ -42,6 +42,6 @@ bool Window::ShouldClose() const {
   return false;
 }
 void Window::SwapBuffers() { glfwSwapBuffers(m_windowHandle); };
-void Window::PoolEvents() { glfwWaitEvents(); };
+void Window::PollEvents() { glfwPollEvents(); };
 
 } // namespace Aerin

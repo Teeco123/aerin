@@ -10,12 +10,12 @@ WaylandWindow::WaylandWindow(const WindowSpecs &windowSpecs) {
   m_windowSpecs = windowSpecs;
   std::println("Window platform: Wayland");
 
+  glfwInitHint(GLFW_PLATFORM, GLFW_PLATFORM_WAYLAND);
+
   if (!glfwInit()) {
     std::cerr << "Failed to init GLFW!\n";
     assert(false);
   };
-
-  glfwWindowHint(GLFW_PLATFORM, GLFW_PLATFORM_WAYLAND);
 
   m_windowHandle = glfwCreateWindow(windowSpecs.width, windowSpecs.height,
                                     windowSpecs.title.c_str(), NULL, NULL);

@@ -20,7 +20,7 @@ public:
 
   bool ShouldClose() const;
   void SwapBuffers();
-  void PoolEvents();
+  void PollEvents();
 
 private:
   virtual void Shutdown() = 0;
