@@ -6,16 +6,20 @@ elseif (UNIX)
     add_definitions(-DPLATFORM_LINUX)
 endif()
 
-file(GLOB_RECURSE AERIN_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
-
-add_library(Aerin SHARED
-	${AERIN_SOURCES}
+set(SOURCES
+	include/core/app.hpp
+	src/core/app.cpp
 )
 
-# Until i fix this so it works with clangd
-#
-# target_precompile_headers(Aerin PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/pch.hpp)
+add_library(Aerin STATIC)
 
-target_include_directories(Aerin PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_sources(Aerin PRIVATE ${SOURCES})
 
-target_link_libraries(Aerin PUBLIC glfw)
+add_compile_definitions(
+    GLFW_INCLUDE_NONE
+)
+
+target_link_libraries(Aerin glfw)
+
+target_include_directories(Aerin PUBLIC "include")
+

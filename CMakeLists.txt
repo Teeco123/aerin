@@ -18,7 +18,7 @@ set(GLFW_BUILD_DOCS OFF CACHE BOOL "Build docs" FORCE)
 set(GLFW_INSTALL OFF CACHE BOOL "Install GLFW" FORCE)
 
 add_subdirectory(aerin)
-add_subdirectory(editor)
+add_subdirectory(sandbox)
 
 install(TARGETS Aerin
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
@@ -26,6 +26,6 @@ install(TARGETS Aerin
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
-install(TARGETS Editor
+install(TARGETS Sandbox
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )

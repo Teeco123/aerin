@@ -1,8 +1,8 @@
 #pragma once
 
-#include "core/window.hpp"
-#include <memory>
 #include <string>
+
+int main();
 
 namespace Aerin {
 
@@ -12,14 +12,17 @@ struct AppSpecs {
 
 class App {
 public:
-  App(const AppSpecs &specs);
-  virtual ~App();
-  void Run();
+  App(const AppSpecs &specs = AppSpecs());
+  ~App();
+
+  void Start();
+  void Stop();
+
+public:
+  static App &GetApp();
 
 private:
-  std::unique_ptr<Window> m_window;
-  bool m_running = true;
-  float m_deltaTime = 0.0f;
-  float m_fixedDeltaTime = 0.0f;
+  AppSpecs m_specs;
+  bool m_running = false;
 };
 } // namespace Aerin
