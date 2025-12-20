@@ -1,8 +1,17 @@
 #include "core/window.hpp"
 #include "platform/macos/window.hpp"
+#include "platform/wayland/window.hpp"
+#include <iostream>
+
 namespace Aerin {
 
+static void GLFWErrorCallback(int error, const char *description) {
+  std::cerr << "[GLFW Error]: " << description << std::endl;
+}
+
 std::unique_ptr<Window> Window::Create(const WindowSpecs &windowSpecs) {
+  glfwSetErrorCallback(GLFWErrorCallback);
+
 #ifdef PLATFORM_WINDOWS
   static_assert(false, "Unsupported platform");
 #elifdef PLATFORM_MACOS
@@ -23,5 +32,16 @@ std::unique_ptr<Window> Window::Create(const WindowSpecs &windowSpecs) {
   static_assert(false, "Unsupported platform");
 #endif
 }
+
 Window::~Window() {}
+
+bool Window::ShouldClose() const {
+  if (glfwWindowShouldClose(m_windowHandle)) {
+    return true;
+  }
+  return false;
+}
+void Window::SwapBuffers() { glfwSwapBuffers(m_windowHandle); };
+void Window::PoolEvents() { glfwWaitEvents(); };
+
 } // namespace Aerin

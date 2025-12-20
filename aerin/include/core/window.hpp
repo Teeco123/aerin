@@ -18,13 +18,15 @@ public:
 
   static std::unique_ptr<Window> Create(const WindowSpecs &windowSpecs);
 
-  virtual bool ShouldClose() const = 0;
+  bool ShouldClose() const;
+  void SwapBuffers();
+  void PoolEvents();
 
 private:
   virtual void Shutdown() = 0;
 
 public:
   WindowSpecs m_windowSpecs;
-  GLFWwindow *m_windowHandle;
+  GLFWwindow *m_windowHandle = nullptr;
 };
 } // namespace Aerin

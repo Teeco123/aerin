@@ -7,6 +7,6 @@ int main() {
   specs.windowSpecs.width = 1920;
   specs.windowSpecs.height = 1080;
 
-  Aerin::App app;
+  Aerin::App app(specs);
   app.Start();
 };
