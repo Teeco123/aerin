@@ -1,13 +1,14 @@
 #pragma once
 
+#include "core/window.hpp"
+#include <memory>
 #include <string>
-
-int main();
 
 namespace Aerin {
 
 struct AppSpecs {
   std::string name = "Aerin app";
+  WindowSpecs windowSpecs;
 };
 
 class App {
@@ -24,5 +25,6 @@ public:
 private:
   AppSpecs m_specs;
   bool m_running = false;
+  std::unique_ptr<Window> m_window;
 };
 } // namespace Aerin

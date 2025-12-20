@@ -8,7 +8,11 @@ endif()
 
 set(SOURCES
 	include/core/app.hpp
+	include/core/window.hpp
+	include/platform/macos/window.hpp
 	src/core/app.cpp
+	src/core/window.cpp
+	src/platform/macos/window.cpp
 )
 
 add_library(Aerin STATIC)
