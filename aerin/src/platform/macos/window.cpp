@@ -26,6 +26,7 @@ MacOSWindow::MacOSWindow(const WindowSpecs &windowSpecs) {
   }
 
   glfwMakeContextCurrent(m_windowHandle);
+  glfwSwapInterval(windowSpecs.vsync ? 1 : 0);
 }
 
 MacOSWindow::~MacOSWindow() { Shutdown(); }

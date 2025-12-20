@@ -10,6 +10,7 @@ struct WindowSpecs {
   std::string title;
   uint32_t width;
   uint32_t height;
+  bool vsync;
 };
 
 class Window {
