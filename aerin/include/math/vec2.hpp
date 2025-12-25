@@ -20,6 +20,10 @@ namespace Aerin {
       return Vec2(x * other, y * other);
     };
 
+    bool Equals(const Vec2 &other) const {
+      return x == other.x && y == other.y;
+    };
+
     Vec2 operator+(const Vec2 &other) const {
       return Add(other);
     };
@@ -30,6 +34,10 @@ namespace Aerin {
 
     float operator*(const Vec2 &other) const {
       return Dot(other);
+    };
+
+    bool operator==(const Vec2 &other) const {
+      return Equals(other);
     };
   };
 

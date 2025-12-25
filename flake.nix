@@ -24,6 +24,7 @@
           cmake
           clang-tools
           glfw
+          catch2_3
         ];
 
         release = pkgs.stdenv.mkDerivation {
