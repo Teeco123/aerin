@@ -11,6 +11,7 @@ set(SOURCES
 	include/core/window.hpp
 	include/platform/macos/window.hpp
 	include/math/vec2.hpp
+	include/math/vec3.hpp
 	src/core/app.cpp
 	src/core/window.cpp
 	src/platform/macos/window.cpp

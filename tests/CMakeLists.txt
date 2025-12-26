@@ -1,5 +1,6 @@
 set(SOURCES
 	math/vec2.cpp
+	math/vec3.cpp
 )
 
 add_executable(Tests)
