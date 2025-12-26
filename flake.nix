@@ -25,6 +25,7 @@
           clang-tools
           glfw
           catch2_3
+          glm
         ];
 
         release = pkgs.stdenv.mkDerivation {
@@ -69,6 +70,15 @@
           default = {
             type = "app";
             program = "${self.packages.${system}.default}/bin/Sandbox";
+          };
+
+          sandbox = {
+            type = "app";
+            program = "${self.packages.${system}.default}/bin/Sandbox";
+          };
+          tests = {
+            type = "app";
+            program = "${self.packages.${system}.default}/bin/Tests";
           };
         };
       }

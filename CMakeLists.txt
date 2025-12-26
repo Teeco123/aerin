@@ -11,6 +11,7 @@ endif()
 
 find_package(glfw3 REQUIRED)
 find_package(Catch2 3 REQUIRED)
+find_package(glm CONFIG REQUIRED)
 
 set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build shared libs" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "Build examples" FORCE)
