@@ -1,5 +1,6 @@
 #include "math/vec3.hpp"
 #include "glm/glm.hpp"
+#include <catch2/benchmark/catch_benchmark.hpp>
 #include <catch2/catch_approx.hpp>
 #include <catch2/catch_test_macros.hpp>
 #include <catch2/generators/catch_generators_adapters.hpp>
@@ -114,3 +115,50 @@ TEST_CASE("Vec3 Operations", "[Vec3]") {
     CHECK(res.z == Catch::Approx(gRes.z));
   }
 }
+
+TEST_CASE("Vec3 Benchmark", "[benchmark]") {
+  auto data = GENERATE(take(1, chunk(7, random<float>(-100.0f, 100.0f))));
+
+  const float x1 = data[0], y1 = data[1], z1 = data[2];
+  const float x2 = data[3], y2 = data[4], z2 = data[5];
+  const float s = data[6];
+
+  const Aerin::Vec3 a(x1, y1, z1);
+  const Aerin::Vec3 b(x2, y2, z2);
+
+  BENCHMARK("Addition") {
+    return a + b;
+  };
+
+  BENCHMARK("Subtraction") {
+    return a - b;
+  };
+
+  BENCHMARK("Multiplication") {
+    return a * s;
+  };
+
+  BENCHMARK("Division") {
+    return a / s;
+  };
+
+  BENCHMARK("Dot") {
+    return a.Dot(b);
+  };
+
+  BENCHMARK("Magnitude") {
+    return a.Magnitude();
+  };
+
+  BENCHMARK("Normalize") {
+    return a.Normalize();
+  };
+
+  BENCHMARK("Distance To") {
+    return a.DistanceTo(b);
+  };
+
+  BENCHMARK("Direction To") {
+    return a.DirectionTo(b);
+  };
+};
