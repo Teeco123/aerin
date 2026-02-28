@@ -27,7 +27,7 @@ add_compile_definitions(
     GLFW_INCLUDE_NONE
 )
 
-target_link_libraries(Aerin glfw)
+target_link_libraries(Aerin glfw GLEW)
 
 target_include_directories(Aerin PUBLIC "include")
 

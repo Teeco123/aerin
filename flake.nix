@@ -26,6 +26,7 @@
           glfw
           catch2_3
           glm
+          glew
         ];
 
         release = pkgs.stdenv.mkDerivation {
