@@ -1,58 +1,61 @@
-#include "core/app.h"
-#include <chrono>
+#include "core/app.hpp"
+#include <cassert>
 #include <memory>
-
-#define WINDOW_WIDTH 600
-#define WINDOW_HEIGHT 600
-#define FIXED_UPDATE_MS 16.6
+#include <print>
 
 namespace Aerin {
-App::App() {}
-App::~App() {}
 
-void App::Run() {
-  m_window = Window::Create(WindowConfig(WINDOW_WIDTH, WINDOW_HEIGHT, "gowno"));
+static App *s_app = nullptr;
 
-  using Clock = std::chrono::high_resolution_clock;
-  using TimePoint = std::chrono::time_point<Clock>;
-  using Duration = std::chrono::duration<double, std::milli>;
+App::App(const AppSpecs &specs) : m_specs(specs) {
+  std::println("App name: {}", specs.name);
+  std::println("Fixed time step in seconds: {}", specs.fixedUpdateSeconds);
+  std::println("Window width: {}", specs.windowSpecs.width);
+  std::println("Window height: {}", specs.windowSpecs.height);
+  std::println("Window title: {}", specs.windowSpecs.title);
+  std::println("Vsync on: {}", specs.windowSpecs.vsync);
 
-  TimePoint lastUpdate = Clock::now();
-  TimePoint lastFixedUpdate = Clock::now();
+  s_app = this;
+  m_window = Window::Create(specs.windowSpecs);
+}
+App::~App() { s_app = nullptr; }
 
-  // Setting up accumulator to ("discharge") for fixed update
-  Clock::duration accumulator = Clock::duration::zero();
-  std::chrono::duration<double, std::milli> slice(FIXED_UPDATE_MS);
-  auto sliceDuration = std::chrono::duration_cast<Clock::duration>(slice);
+void App::Start(const AppSpecs &specs) {
+  m_running = true;
+  double lastUpdate = GetTime();
+  double lastFixedUpdate = GetTime();
+  double accumulator = 0.0f;
 
   while (m_running) {
-    // Calculating delta time
     if (m_window->ShouldClose()) {
       m_running = false;
     }
 
-    TimePoint now = Clock::now();
-    m_deltaTime =
-        (float)std::chrono::duration_cast<Duration>(now - lastUpdate).count();
-    lastUpdate +=
-        std::chrono::duration_cast<Clock::duration>(Duration(m_deltaTime));
-    accumulator +=
-        std::chrono::duration_cast<Clock::duration>(Duration(m_deltaTime));
+    double now = GetTime();
+    m_deltaTime = now - lastUpdate;
+    lastUpdate += m_deltaTime;
+    accumulator += m_deltaTime;
 
-    while (accumulator > slice) {
-      // Calculating fixed delta time
-      TimePoint now = Clock::now();
-      m_fixedDeltaTime =
-          (float)std::chrono::duration_cast<Duration>(now - lastFixedUpdate)
-              .count();
-      lastFixedUpdate += std::chrono::duration_cast<Clock::duration>(
-          Duration(m_fixedDeltaTime));
+    while (accumulator >= specs.fixedUpdateSeconds) {
+      double now = GetTime();
+      m_fixedDeltaTime = now - lastFixedUpdate;
+      lastFixedUpdate += m_fixedDeltaTime;
+      accumulator -= specs.fixedUpdateSeconds;
+    };
 
-      // Do as many calculations to catch up
-      accumulator -= sliceDuration;
-    }
     m_window->PollEvents();
     m_window->SwapBuffers();
   }
 }
+void App::Stop() { m_running = false; }
+
+App &App::GetApp() {
+  assert(s_app);
+  return *s_app;
+}
+
+double App::GetTime() { return glfwGetTime(); };
+double App::GetDeltaTime() { return m_deltaTime; };
+double App::GetFixedDeltaTime() { return m_fixedDeltaTime; };
+
 } // namespace Aerin

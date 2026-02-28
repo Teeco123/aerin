@@ -6,13 +6,28 @@ elseif (UNIX)
     add_definitions(-DPLATFORM_LINUX)
 endif()
 
-file(GLOB_RECURSE AERIN_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
-
-add_library(Aerin SHARED
-	${AERIN_SOURCES}
-	aerin.h
+set(SOURCES
+	include/core/app.hpp
+	include/core/window.hpp
+	include/platform/macos/window.hpp
+	include/platform/wayland/window.hpp
+	include/math/vec2.hpp
+	include/math/vec3.hpp
+	src/core/app.cpp
+	src/core/window.cpp
+	src/platform/macos/window.cpp
+	src/platform/wayland/window.cpp
 )
 
-target_include_directories(Aerin PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+add_library(Aerin STATIC)
 
-target_link_libraries(Aerin PUBLIC glfw MetalCPP)
+target_sources(Aerin PRIVATE ${SOURCES})
+
+add_compile_definitions(
+    GLFW_INCLUDE_NONE
+)
+
+target_link_libraries(Aerin glfw)
+
+target_include_directories(Aerin PUBLIC "include")
+

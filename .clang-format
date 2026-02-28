@@ -1,0 +1,7 @@
+AllowShortFunctionsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortBlocksOnASingleLine: false
+
+NamespaceIndentation: All
+BreakBeforeBraces: Attach
