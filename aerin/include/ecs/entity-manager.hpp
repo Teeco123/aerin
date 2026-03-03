@@ -26,8 +26,8 @@ namespace Aerin {
       return Entity(id, this);
     };
 
-    void DestroyEntity(Entity entity) {
-      m_availableEntityID.push(entity.id);
+    void DestroyEntity(EntityID id) {
+      m_availableEntityID.push(id);
     };
 
   private:

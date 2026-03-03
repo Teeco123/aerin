@@ -13,6 +13,12 @@ namespace Aerin {
 
   template <typename T> class ComponentArray : public IComponentArray {
   public:
+    ComponentArray(size_t maxEntities) {
+      m_sparse.resize(maxEntities);
+      m_dense.resize(maxEntities);
+      m_components.resize(maxEntities);
+    }
+
     void InsertComponent(EntityID id, T component) {
       size_t newId = m_size;
       m_sparse[id] = newId;
@@ -20,12 +26,20 @@ namespace Aerin {
       m_components[newId] = component;
       m_size++;
 
-      std::println("{} {} {} {}", m_components, m_dense, m_sparse, m_size);
+      std::println("size: {}", m_size);
+
+      for (int i = 0; i < 10; i++) {
+        std::println("sparse at {}: {}", i, m_sparse[i]);
+      }
+
+      for (int i = 0; i < 10; i++) {
+        std::println("dense at {}: {}", i, m_dense[i]);
+      }
     };
 
   private:
     std::vector<T> m_components;
-    std::vector<T> m_dense;
+    std::vector<EntityID> m_dense;
     std::vector<size_t> m_sparse;
 
     size_t m_size{};

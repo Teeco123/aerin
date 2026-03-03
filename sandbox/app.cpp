@@ -1,6 +1,6 @@
 #include "core/app.hpp"
-#include "ecs/entity-manager.hpp"
-#include "ecs/entity.hpp"
+#include "ecs/components-array.hpp"
+#include "ecs/components.hpp"
 
 int main() {
   Aerin::AppSpecs specs;
@@ -12,14 +12,18 @@ int main() {
   specs.windowSpecs.vsync = false;
 
   Aerin::App app(specs);
-  Aerin::EntityManager entityManager;
-  Aerin::Entity id1 = entityManager.CreateEntity();
-  Aerin::Entity id2 = entityManager.CreateEntity();
-  Aerin::Entity id3 = entityManager.CreateEntity();
-  Aerin::Entity id4 = entityManager.CreateEntity();
-  Aerin::Entity id5 = entityManager.CreateEntity();
-  entityManager.DestroyEntity(id3);
+  Aerin::ECS ecs = app.GetECS();
+  Aerin::ComponentArray<Aerin::Position> positionArray(1024);
 
-  Aerin::Entity id6 = entityManager.CreateEntity();
+  ecs.CreateEntity();
+  ecs.DestroyEntity(0);
+
+  ecs.CreateEntity();
+  ecs.CreateEntity();
+  ecs.CreateEntity();
+
+  positionArray.InsertComponent(0, Aerin::Position());
+  positionArray.InsertComponent(2, Aerin::Position());
+
   app.Start();
 };
