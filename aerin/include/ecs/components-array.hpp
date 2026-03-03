@@ -30,10 +30,10 @@ namespace Aerin {
 
       for (int i = 0; i < 10; i++) {
         std::println("sparse at {}: {}", i, m_sparse[i]);
+        std::println("dense at {}: {}", i, m_dense[i]);
       }
 
       for (int i = 0; i < 10; i++) {
-        std::println("dense at {}: {}", i, m_dense[i]);
       }
     };
 

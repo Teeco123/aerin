@@ -3,9 +3,7 @@
 #include <cstdint>
 
 namespace Aerin {
-
   using EntityID = uint32_t;
-
   class EntityManager;
 
   class Entity {

@@ -1,5 +1,4 @@
 #include "core/app.hpp"
-#include "ecs/components-array.hpp"
 #include "ecs/components.hpp"
 
 int main() {
@@ -13,7 +12,8 @@ int main() {
 
   Aerin::App app(specs);
   Aerin::ECS &ecs = app.GetECS();
-  Aerin::ComponentArray<Aerin::Position> positionArray(1024);
+
+  ecs.RegisterComponent<Aerin::Position>();
 
   ecs.CreateEntity();
   ecs.DestroyEntity(0);
@@ -21,9 +21,17 @@ int main() {
   ecs.CreateEntity();
   ecs.CreateEntity();
   ecs.CreateEntity();
+  ecs.CreateEntity();
+  ecs.CreateEntity();
+  ecs.CreateEntity();
+  ecs.CreateEntity();
+  ecs.CreateEntity();
+  ecs.CreateEntity();
 
-  positionArray.InsertComponent(0, Aerin::Position());
-  positionArray.InsertComponent(2, Aerin::Position());
+  ecs.AddComponent(0, Aerin::Position());
+  ecs.AddComponent(2, Aerin::Position());
+  ecs.AddComponent(4, Aerin::Position());
+  ecs.AddComponent(8, Aerin::Position());
 
   app.Start();
 };
