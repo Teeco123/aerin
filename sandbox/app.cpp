@@ -12,7 +12,7 @@ int main() {
   specs.windowSpecs.vsync = false;
 
   Aerin::App app(specs);
-  Aerin::ECS ecs = app.GetECS();
+  Aerin::ECS &ecs = app.GetECS();
   Aerin::ComponentArray<Aerin::Position> positionArray(1024);
 
   ecs.CreateEntity();

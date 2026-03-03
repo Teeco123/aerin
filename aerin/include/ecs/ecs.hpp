@@ -7,24 +7,24 @@ namespace Aerin {
   public:
     static std::unique_ptr<ECS> Init() {
       auto ecs = std::make_unique<ECS>();
-      ecs->m_entityManager = EntityManager();
+      ecs->m_entityManager = std::make_unique<EntityManager>();
 
       return ecs;
     };
 
     Entity CreateEntity() {
-      return m_entityManager.CreateEntity();
+      return m_entityManager->CreateEntity();
     };
 
     void DestroyEntity(EntityID id) {
-      return m_entityManager.DestroyEntity(id);
+      return m_entityManager->DestroyEntity(id);
     };
 
     EntityManager &GetEntityManager() {
-      return m_entityManager;
+      return *m_entityManager;
     };
 
   private:
-    EntityManager m_entityManager;
+    std::unique_ptr<EntityManager> m_entityManager;
   };
 }; // namespace Aerin
