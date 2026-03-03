@@ -13,6 +13,10 @@ set(SOURCES
 	include/platform/wayland/window.hpp
 	include/math/vec2.hpp
 	include/math/vec3.hpp
+	include/ecs/entity.hpp
+	include/ecs/entity-manager.hpp
+	include/ecs/components.hpp
+	include/ecs/components-array.hpp
 	src/core/app.cpp
 	src/core/window.cpp
 	src/platform/macos/window.cpp
