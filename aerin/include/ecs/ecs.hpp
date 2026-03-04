@@ -13,8 +13,12 @@ namespace Aerin {
       auto ecs = std::make_unique<ECS>();
       ecs->m_entityManager = std::make_unique<EntityManager>();
       ecs->m_componentManager = std::make_unique<ComponentManager>();
-
       return ecs;
+    };
+
+  public:
+    EntityManager &GetEntityManager() {
+      return *m_entityManager;
     };
 
     Entity CreateEntity() {
@@ -29,8 +33,9 @@ namespace Aerin {
       return m_entityManager->AliveEntities();
     };
 
-    EntityManager &GetEntityManager() {
-      return *m_entityManager;
+  public:
+    ComponentManager &GetComponentManager() {
+      return *m_componentManager;
     };
 
     template <typename T> void RegisterComponent() {
@@ -47,10 +52,6 @@ namespace Aerin {
 
     template <typename T> bool HasComponent(Entity id) {
       return m_componentManager->HasComponent<T>(id);
-    };
-
-    ComponentManager &GetComponentManager() {
-      return *m_componentManager;
     };
 
   private:
