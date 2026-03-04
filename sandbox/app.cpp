@@ -1,5 +1,6 @@
 #include "core/app.hpp"
 #include "ecs/components.hpp"
+#include <print>
 
 int main() {
   Aerin::AppSpecs specs;
@@ -16,22 +17,24 @@ int main() {
   ecs.RegisterComponent<Aerin::Position>();
 
   ecs.CreateEntity();
-  ecs.DestroyEntity(0);
+  ecs.CreateEntity();
+  ecs.CreateEntity();
+
+  ecs.DestroyEntity(1);
 
   ecs.CreateEntity();
   ecs.CreateEntity();
   ecs.CreateEntity();
-  ecs.CreateEntity();
-  ecs.CreateEntity();
-  ecs.CreateEntity();
-  ecs.CreateEntity();
-  ecs.CreateEntity();
-  ecs.CreateEntity();
 
-  ecs.AddComponent(0, Aerin::Position());
-  ecs.AddComponent(2, Aerin::Position());
-  ecs.AddComponent(4, Aerin::Position());
-  ecs.AddComponent(8, Aerin::Position());
+  ecs.InsertComponent<Aerin::Position>(3);
+
+  if (ecs.HasComponent<Aerin::Position>(3)) {
+    std::print("HasComponent id 3");
+  };
+
+  if (ecs.HasComponent<Aerin::Position>(2)) {
+    std::print("HasComponent id 2");
+  };
 
   app.Start();
 };

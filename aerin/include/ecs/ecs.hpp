@@ -1,6 +1,9 @@
+#pragma once
+
 #include "ecs/components-manager.hpp"
 #include "ecs/entity-manager.hpp"
-#include "ecs/entity.hpp"
+
+#include <cstdint>
 #include <memory>
 
 namespace Aerin {
@@ -18,8 +21,12 @@ namespace Aerin {
       return m_entityManager->CreateEntity();
     };
 
-    void DestroyEntity(EntityID id) {
-      return m_entityManager->DestroyEntity(id);
+    void DestroyEntity(Entity id) {
+      m_entityManager->DestroyEntity(id);
+    };
+
+    uint32_t AliveEntities() {
+      return m_entityManager->AliveEntities();
     };
 
     EntityManager &GetEntityManager() {
@@ -27,11 +34,19 @@ namespace Aerin {
     };
 
     template <typename T> void RegisterComponent() {
-      return m_componentManager->RegisterComponent<T>();
+      m_componentManager->RegisterComponent<T>();
     };
 
-    template <typename T> void AddComponent(EntityID id, T component) {
-      return m_componentManager->AddComponent(id, component);
+    template <typename T> void InsertComponent(Entity id, T component) {
+      m_componentManager->InsertComponent(id, component);
+    };
+
+    template <typename T> void InsertComponent(Entity id) {
+      m_componentManager->InsertComponent<T>(id);
+    };
+
+    template <typename T> bool HasComponent(Entity id) {
+      return m_componentManager->HasComponent<T>(id);
     };
 
     ComponentManager &GetComponentManager() {

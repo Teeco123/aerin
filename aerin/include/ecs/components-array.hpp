@@ -1,15 +1,13 @@
 #pragma once
 
-#include "entity.hpp"
+#include "entity-manager.hpp"
+
 #include <cstddef>
 #include <print>
 #include <vector>
 
 namespace Aerin {
-  class IComponentArray {
-  public:
-    virtual ~IComponentArray() = default;
-  };
+  class IComponentArray {};
 
   template <typename T> class ComponentArray : public IComponentArray {
   public:
@@ -19,27 +17,29 @@ namespace Aerin {
       m_components.resize(maxEntities);
     }
 
-    void InsertComponent(EntityID id, T component) {
+    void InsertComponent(Entity id, T component) {
       size_t newId = m_size;
       m_sparse[id] = newId;
       m_dense[newId] = id;
       m_components[newId] = component;
       m_size++;
+    };
 
-      std::println("size: {}", m_size);
+    void InsertComponent(Entity id) {
+      InsertComponent(id, T{});
+    };
 
-      for (int i = 0; i < 10; i++) {
-        std::println("sparse at {}: {}", i, m_sparse[i]);
-        std::println("dense at {}: {}", i, m_dense[i]);
-      }
-
-      for (int i = 0; i < 10; i++) {
-      }
+    bool HasComponent(Entity id) {
+      size_t sparse = m_sparse[id];
+      if (m_dense[sparse] == id) {
+        return true;
+      };
+      return false;
     };
 
   private:
     std::vector<T> m_components;
-    std::vector<EntityID> m_dense;
+    std::vector<Entity> m_dense;
     std::vector<size_t> m_sparse;
 
     size_t m_size{};

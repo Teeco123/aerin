@@ -1,5 +1,8 @@
+#pragma once
+
 #include "ecs/components-array.hpp"
 #include "ecs/components.hpp"
+
 #include <cassert>
 #include <memory>
 #include <unordered_map>
@@ -22,17 +25,19 @@ namespace Aerin {
       m_nextComponentType++;
     };
 
-    template <typename T> void AddComponent(EntityID id, T component) {
+    template <typename T> void InsertComponent(Entity id, T component) {
       GetComponentArray<T>()->InsertComponent(id, component);
     };
 
+    template <typename T> void InsertComponent(Entity id) {
+      GetComponentArray<T>()->InsertComponent(id);
+    };
+
+    template <typename T> bool HasComponent(Entity id) {
+      return GetComponentArray<T>()->HasComponent(id);
+    };
+
   private:
-    std::unordered_map<const char *, ComponentType> m_componentTypes{};
-    std::unordered_map<const char *, std::shared_ptr<IComponentArray>>
-        m_componentArrays{};
-
-    ComponentType m_nextComponentType{};
-
     template <typename T>
     std::shared_ptr<ComponentArray<T>> GetComponentArray() {
       const char *typeName = typeid(T).name();
@@ -43,6 +48,13 @@ namespace Aerin {
       return std::static_pointer_cast<ComponentArray<T>>(
           m_componentArrays[typeName]);
     }
+
+  private:
+    std::unordered_map<const char *, ComponentType> m_componentTypes{};
+    std::unordered_map<const char *, std::shared_ptr<IComponentArray>>
+        m_componentArrays{};
+
+    ComponentType m_nextComponentType{};
   };
 
 }; // namespace Aerin

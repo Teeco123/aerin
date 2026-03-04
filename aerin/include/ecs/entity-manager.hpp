@@ -1,10 +1,10 @@
 #pragma once
 
-#include "entity.hpp"
-#include <print>
+#include <cstdint>
 #include <queue>
 
 namespace Aerin {
+  using Entity = uint32_t;
 
   class EntityManager {
   public:
@@ -13,25 +13,28 @@ namespace Aerin {
 
     Entity CreateEntity() {
       // Re-use recycled entity id
-      if (!m_availableEntityID.empty()) {
-        EntityID id = m_availableEntityID.front();
-        m_availableEntityID.pop();
-        return Entity(id, this);
+      if (!m_available.empty()) {
+        Entity id = m_available.front();
+        m_available.pop();
+        return id;
       }
 
       // If no recycled entity id create new one
-      EntityID id = aliveEntities;
-      aliveEntities++;
-      std::println("{}", aliveEntities);
-      return Entity(id, this);
+      m_entities++;
+      Entity id = m_entities;
+      return id;
     };
 
-    void DestroyEntity(EntityID id) {
-      m_availableEntityID.push(id);
+    void DestroyEntity(Entity id) {
+      m_available.push(id);
+    };
+
+    uint32_t AliveEntities() {
+      return m_entities;
     };
 
   private:
-    std::queue<EntityID> m_availableEntityID;
-    EntityID aliveEntities = 0;
+    std::uint32_t m_entities;
+    std::queue<Entity> m_available;
   };
 } // namespace Aerin
