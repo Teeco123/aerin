@@ -3,7 +3,6 @@
 #include "entity-manager.hpp"
 
 #include <cstddef>
-#include <print>
 #include <vector>
 
 namespace Aerin {

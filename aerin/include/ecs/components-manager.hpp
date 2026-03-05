@@ -37,6 +37,14 @@ namespace Aerin {
       return GetComponentArray<T>()->HasComponent(id);
     };
 
+    template <typename T> ComponentType GetComponentType() {
+      const char *typeName = typeid(T).name();
+
+      assert(m_componentTypes.find(typeName) != m_componentTypes.end() &&
+             "Component not registered before use.");
+      return m_componentTypes.at(typeName);
+    };
+
   private:
     template <typename T>
     std::shared_ptr<ComponentArray<T>> GetComponentArray() {
@@ -47,7 +55,7 @@ namespace Aerin {
 
       return std::static_pointer_cast<ComponentArray<T>>(
           m_componentArrays[typeName]);
-    }
+    };
 
   private:
     std::unordered_map<const char *, ComponentType> m_componentTypes{};

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ecs/components-manager.hpp"
+#include "ecs/components.hpp"
 #include "ecs/entity-manager.hpp"
 
 #include <cstdint>
@@ -21,6 +22,10 @@ namespace Aerin {
       return *m_entityManager;
     };
 
+    ComponentManager &GetComponentManager() {
+      return *m_componentManager;
+    };
+
     Entity CreateEntity() {
       return m_entityManager->CreateEntity();
     };
@@ -33,21 +38,20 @@ namespace Aerin {
       return m_entityManager->AliveEntities();
     };
 
-  public:
-    ComponentManager &GetComponentManager() {
-      return *m_componentManager;
-    };
-
     template <typename T> void RegisterComponent() {
       m_componentManager->RegisterComponent<T>();
     };
 
     template <typename T> void InsertComponent(Entity id, T component) {
+      ComponentType componentType = m_componentManager->GetComponentType<T>();
       m_componentManager->InsertComponent(id, component);
+      m_entityManager->UpdateSignatureOnInsert(id, componentType);
     };
 
     template <typename T> void InsertComponent(Entity id) {
+      ComponentType componentType = m_componentManager->GetComponentType<T>();
       m_componentManager->InsertComponent<T>(id);
+      m_entityManager->UpdateSignatureOnInsert(id, componentType);
     };
 
     template <typename T> bool HasComponent(Entity id) {

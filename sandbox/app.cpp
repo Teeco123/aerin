@@ -28,13 +28,5 @@ int main() {
 
   ecs.InsertComponent<Aerin::Position>(3);
 
-  if (ecs.HasComponent<Aerin::Position>(3)) {
-    std::print("HasComponent id 3");
-  };
-
-  if (ecs.HasComponent<Aerin::Position>(2)) {
-    std::print("HasComponent id 2");
-  };
-
   app.Start();
 };
